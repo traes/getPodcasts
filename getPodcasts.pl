@@ -19,7 +19,7 @@ sub getRTVE
 }
 
 # Deutsche Welle
-sub getDW
+sub getRSS
 {
 	my ($url,$file) = @_;
 	my $content = get($url) or die $!;
@@ -35,16 +35,19 @@ sub getDW
 # delete old mp3 files
 system("rm -- *.mp3");
 
+# CBS
+getRSS("http://cbsradionewsfeed.com/rss.php?id=126&ud=12","CBS-News.mp3");
+
 # Deutsche Welle (DW)
-getDW("http://rss.dw.com/xml/podcast_global-3000","DW-Global3000.mp3");
-getDW("http://rss.dw.com/xml/podcast_journal-reporter","DW-Reporter.mp3");
-getDW("http://rss.dw.com/xml/podcast_wissenschaft","DW-Wissenschaft.mp3");
-getDW("http://rss.dw.com/xml/podcast_shift","DW-Shift.mp3");
-getDW("http://rss.dw.com/xml/podcast_made-in-germany","DW-MadeInGermany.mp3");
-getDW("http://rss.dw.com/xml/podcast_projekt-zukunft","DW-Zukunft.mp3");
-getDW("http://rss.dw.com/xml/DKpodcast_topthemamitvokabeln_de","DW-Vokabeln.mp3");
-getDW("http://rss.dw.com/xml/DKpodcast_alltagsdeutsch_de","DW-Alltags.mp3");
-getDW("http://rss.dw.com/xml/podcast_jornal-pt","DW-Portugues.mp3");
+getRSS("http://rss.dw.com/xml/podcast_global-3000","DW-Global3000.mp3");
+getRSS("http://rss.dw.com/xml/podcast_journal-reporter","DW-Reporter.mp3");
+getRSS("http://rss.dw.com/xml/podcast_wissenschaft","DW-Wissenschaft.mp3");
+getRSS("http://rss.dw.com/xml/podcast_shift","DW-Shift.mp3");
+getRSS("http://rss.dw.com/xml/podcast_made-in-germany","DW-MadeInGermany.mp3");
+getRSS("http://rss.dw.com/xml/podcast_projekt-zukunft","DW-Zukunft.mp3");
+getRSS("http://rss.dw.com/xml/DKpodcast_topthemamitvokabeln_de","DW-Vokabeln.mp3");
+getRSS("http://rss.dw.com/xml/DKpodcast_alltagsdeutsch_de","DW-Alltags.mp3");
+getRSS("http://rss.dw.com/xml/podcast_jornal-pt","DW-Portugues.mp3");
 
 # Radio y Televisión Española (RTVE)
 getRTVE("http://www.rtve.es/alacarta/audios/a-hombros-de-gigantes/","RTVE-Hombros.mp3");
