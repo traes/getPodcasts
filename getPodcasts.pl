@@ -51,8 +51,8 @@ getRSS("http://rss.dw.com/xml/podcast_jornal-pt","DW-Portugues.mp3");
 
 # Radio y Televisión Española (RTVE)
 getRTVE("http://www.rtve.es/alacarta/audios/a-hombros-de-gigantes/","RTVE-Hombros.mp3");
+getRTVE("http://www.rtve.es/alacarta/audios/cruz-roja/","RTVE-CruzRoja.mp3");
 getRTVE("http://www.rtve.es/alacarta/audios/cinco-continentes/","RTVE-Continentes.mp3");
-getRTVE("http://www.rtve.es/alacarta/audios/hispanorama/","RTVE-Hispanorama.mp3");
 getRTVE("http://www.rtve.es/alacarta/audios/america-hoy/","RTVE-AmericaHoy.mp3");
 getRTVE("http://www.rtve.es/alacarta/audios/emision-en-ruso/","RTVE-Ruso.mp3");
 getRTVE("http://www.rtve.es/alacarta/audios/emision-en-portugues/","RTVE-Portugues.mp3");
